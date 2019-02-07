@@ -37,8 +37,8 @@ if (isset($_POST['submit'])){
 	}
 
 	if(!$errores){
-		$enviar_a = 'itmcomputacion@gmail.com';
-		$asunto = 'Correo enviado desde itmcomputacion.com';
+		$enviar_a = 'fer.nogara@gmail.com';
+		$asunto = 'Correo enviado desde imlatinamerica.com';
 		$mensaje_preparado = "De: ".$nombre."\n";
 		$mensaje_preparado .= "Correo: ". $correo."\n";
 		$mensaje_preparado .= "Mensaje: " . $mensaje;
