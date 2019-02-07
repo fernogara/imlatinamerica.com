@@ -159,11 +159,30 @@
             <div class="row">
               <div class="col-md-12">
                 <div class="call-to-action text-center">
-                  <form class="form-inline margin-clear d-flex justify-content-center">
+                  <form action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']);?>" method="post" class="form-inline margin-clear d-flex justify-content-center">
                     <div class="form-group has-feedback">
                       <label class="sr-only" for="subscribe3">Correo electrónico</label>
-                      <input type="email" class="form-control form-control-lg" id="subscribe3" placeholder="Ingresa tu email" required value="<?php if(!$enviado && isset($correo)){echo $correo;}?>">
+                      <input type="email" class="form-control form-control-lg" id="subscribe3" placeholder="Ingresa tu email"  required value="<?php if(!$enviado && isset($correo)){echo $correo;}?>">
                       <i class="fa fa-envelope form-control-feedback"></i>
+                      
+                      <?php if(!empty($errores)):?>
+
+                      <div class="alert error">
+
+                      <?php echo $errores; ?>
+
+                      </div>
+
+                      <?php elseif($enviado): ?>
+
+                      <div class="alert success">
+
+                          <men>Enviado Correctamente</men>
+
+                      </div>
+
+                    <?php endif ?>
+
                     </div>
                     <button type="submit" class="btn btn-lg btn-gray-transparent btn-animated ml-2">Suscribirse<i class="fa fa-send"></i></button>
                   </form>
