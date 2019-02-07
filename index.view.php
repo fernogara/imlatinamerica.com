@@ -96,10 +96,8 @@
               </div>
               <div class="col-md-8">
                 <ul class="social-links text-md-right text-center-xs animated-effect-1 circle small clearfix">
-                  <li class="twitter"><a href="#"><i class="fab fa-instagram"></i></a></li>
-                  <li class="linkedin"><a href="#"><i class="fab fa-linkedin"></i></a></li>
-                  <li class="googleplus"><a href="#"><i class="fab fa-telegram"></i></a></li>
-                  <li class="facebook"><a href="#"><i class="fab fa-facebook"></i></a></li>
+                  <li class="instagram"><a href="https://www.instagram.com/imlatinamerica/" target="_blank"><i class="fab fa-instagram"></i></a></li>             
+                  <li class="facebook"><a href="https://www.facebook.com/imlatinamerica/" target="_blank"><i class="fab fa-facebook"></i></a></li>
                 </ul>
               </div>
             </div>
