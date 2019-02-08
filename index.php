@@ -2,14 +2,15 @@
 
 $errores='';
 $enviado='';
-$erroresSesion='';
-$usuarioRemoto='';
+// $erroresSesion='';
+// $usuarioRemoto='';
 
-if (isset($_POST['submit'])){
-	$nombre= $_POST['nombre'];
+if (isset($_POST['subscribirse'])){
+	// $nombre= $_POST['nombre'];
 	$correo= $_POST['correo'];
-	$mensaje= $_POST['mensaje'];
-
+	// $mensaje= $_POST['mensaje'];
+	$nombre='Prueba de nombre';
+	$mensaje='Prueba de mensaje';
 
 	if (!empty($nombre)){
 		$nombre= trim($nombre);
@@ -37,7 +38,7 @@ if (isset($_POST['submit'])){
 	}
 
 	if(!$errores){
-		$enviar_a = 'fer.nogara@gmail.com';
+		$enviar_a = 'imarketslivelatinamerica@gmail.com';
 		$asunto = 'Correo enviado desde imlatinamerica.com';
 		$mensaje_preparado = "De: ".$nombre."\n";
 		$mensaje_preparado .= "Correo: ". $correo."\n";
@@ -49,35 +50,35 @@ if (isset($_POST['submit'])){
 
 }
 
-if (isset($_POST['ingresar'])){
-	$usuario= $_POST['usuario'];
-	$passwordSesion= $_POST['passwordSesion'];
+// if (isset($_POST['ingresar'])){
+// 	$usuario= $_POST['usuario'];
+// 	$passwordSesion= $_POST['passwordSesion'];
 
-	if (!empty($usuario)){
-		$usuario= trim($usuario);
-		$usuario= filter_var($usuario,FILTER_SANITIZE_STRING);
-		if (!($usuario == 'REMOTO')){
-			$erroresSesion .= 'El usuario no es valido <br />';
-		}
-	} else{
-	$erroresSesion .= 'Por favor ingrese un nombre de usuario <br />';
-	}
+// 	if (!empty($usuario)){
+// 		$usuario= trim($usuario);
+// 		$usuario= filter_var($usuario,FILTER_SANITIZE_STRING);
+// 		if (!($usuario == 'REMOTO')){
+// 			$erroresSesion .= 'El usuario no es valido <br />';
+// 		}
+// 	} else{
+// 	$erroresSesion .= 'Por favor ingrese un nombre de usuario <br />';
+// 	}
 
-	if (!empty($passwordSesion)){		
-		$passwordSesion= trim($passwordSesion);
-		$passwordSesion= filter_var($passwordSesion,FILTER_SANITIZE_STRING);
-		if (!($passwordSesion == 'REMOTO*')){
-			$erroresSesion .= 'La contraseña no es valida <br />';
-		}
-	} else{
-	$erroresSesion .= 'Por favor ingrese una contraseña <br />';
-	}
+// 	if (!empty($passwordSesion)){		
+// 		$passwordSesion= trim($passwordSesion);
+// 		$passwordSesion= filter_var($passwordSesion,FILTER_SANITIZE_STRING);
+// 		if (!($passwordSesion == 'REMOTO*')){
+// 			$erroresSesion .= 'La contraseña no es valida <br />';
+// 		}
+// 	} else{
+// 	$erroresSesion .= 'Por favor ingrese una contraseña <br />';
+// 	}
 
-	if(!$erroresSesion){
-		$usuarioRemoto = 'true';
-	}
+// 	if(!$erroresSesion){
+// 		$usuarioRemoto = 'true';
+// 	}
 
-}
+// }
 
 require 'index.view.php';
 
